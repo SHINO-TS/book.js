@@ -31,9 +31,19 @@
   "use strict";
   window.alert('アプリの連携完了しました');
   (window.confirm('ゲームスタート！準備はいい？'))
-  if (window.confirm('ゲーム開始')){
+  if (window.confirm('...')){
       console.log('ゲーム開始');
   }
+  const answer =window.prompt('ヘルプをみますか？'); //let answer = ~
+  if(answer === 'YES') {
+      window.alert('タップでジャンプ、障害物をよける。');
+  } else if (answer === 'NO') {
+      window.alert('ゲーム起動中...');
+      window.alert('YESかNOでお答えください。');
+  }
+  console.log(answer);
+  //answer = 'NO';
+  //console.log(answer); letの場合書き足せる　constの場合はエラー
   document.getElementById('choice').textContent = new Date();
   console.log(document.getElementById('choice').textContent);
     </script>
