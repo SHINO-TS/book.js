@@ -37,6 +37,10 @@
   const answer =window.prompt('ヘルプをみますか？'); //let answer = ~
   if(answer === 'YES') {
       window.alert('タップでジャンプ、障害物をよける。');
+  } else if (answer === 'NO') {
+      window.alert('ゲーム起動中...');
+  } else {
+      window.alert('YESかNOでお答えください。');
   }
   console.log(answer);
   //answer = 'NO';
