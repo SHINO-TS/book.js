@@ -19,6 +19,9 @@
 <div class="container">
 <section>
   <p id="choice">ここに日時を表示します</p>
+  <p id="output"></p>
+  <p id="output2"></p>
+  <p id="output3"></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -75,7 +78,7 @@
             i = i +1;
         }
 
-        let enemy = 100;
+        /*let enemy = 100;
         let count   = 0;
 
         window.alert('戦闘スタート！');
@@ -85,7 +88,17 @@
             enemy -= attack;
             count   += 1;
         }
-        console.log(count+'回でモンスターを倒した'); //変数や定数には、有効範囲がある
+        console.log(count+'回でモンスターを倒した');*/ //変数や定数には、有効範囲がある
+
+        function total(price) {
+            const tax = 0.1;
+            return price + price * tax;
+        }　//functionは、何度でも使え呼び出すことができる。
+        console.log('コーヒーメーカーの値段は' + total(80000) + '円(税込)です。');
+            document.getElementById('output').textContent = 'コーヒーメーカーの値段は'　+ total(80000) + '円(税込)です。'; //HTMLに出力<section>タグへ
+            document.getElementById('output2').textContent = 'コーヒーフィルターの値段は'　+ total(800) + '円(税込)です。';//HTMLに出力<section>タグへ
+            document.getElementById('output3').textContent = 'コーヒー豆の値段は'　+ total(10) + '円(税込)です。';//HTMLに出力<section>タグへ
+
 
   document.getElementById('choice').textContent = new Date();
   console.log(document.getElementById('choice').textContent);
