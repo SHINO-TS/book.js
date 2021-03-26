@@ -22,6 +22,9 @@
   <p id="output"></p>
   <p id="output2"></p>
   <p id="output3"></p>
+  <h1>やることリスト</h1>
+  <ul id="list">
+  </ul>
 </section>
 </div><!-- /.container -->
 </main>
@@ -72,7 +75,7 @@
             window.alert('お弁当を買ってください');
         }
         
-        let i = 1;
+         let i = 1;
         while(i <= 10) {
             console.log(i + '枚');
             i = i +1;
@@ -90,18 +93,22 @@
         }
         console.log(count+'回でモンスターを倒した');*/ //変数や定数には、有効範囲がある
 
-        /*function total(price) {
+        function total(price) {
             const tax = 0.1;
             return price + price * tax;
         }　//functionは、何度でも使え呼び出すことができる。
-        console.log('コーヒーメーカーの値段は' + total(80000) + '円(税込)です。');
-            document.getElementById('output').textContent = 'コーヒーメーカーの値段は'　+ total(80000) + '円(税込)です。'; //HTMLに出力<section>タグへ
-            document.getElementById('output2').textContent = 'コーヒーフィルターの値段は'　+ total(800) + '円(税込)です。';//HTMLに出力<section>タグへ
-            document.getElementById('output3').textContent = 'コーヒー豆の値段は'　+ total(10) + '円(税込)です。';*///HTMLに出力<section>タグへ
+        //console.log('コーヒーメーカーの値段は' + total(80000) + '円(税込)です。');
+            /*document.getElementById('output').textContent = 'コーヒーメーカーの値段は'　+ total(80000) + '円(税込)です。';  //HTMLに出力<section>タグへ
+            document.getElementById('output2').textContent = 'コーヒーフィルターの値段は'　+ total(800) + '円(税込)です。';  //HTMLに出力<section>タグへ
+            document.getElementById('output3').textContent = 'コーヒー豆の値段は'　+ total(10) + '円(税込)です。';*/  //HTMLに出力<section>タグへ
+
+                document.getElementById('output').textContent = `コーヒーメーカーの値段は${total(80000)}円(税込)です。`;
+                document.getElementById('output2').textContent = `コーヒーフィルターの値段は${total(800)}円(税込)です。`;
+                document.getElementById('output3').textContent = `コーヒー豆の値段は${total(10)}円(税込)です。`;
 
             
-        function fizzbuzz(num)  {
-                if(num % 3 === 0 && num % 5 === 0){
+        function fizzbuzz(num) {
+                if (num % 3 === 0 && num % 5 === 0){
                     return 'fizzbuzz';
                 } else if(num % 3 === 0){
                     return 'fizz';
@@ -110,16 +117,38 @@
                 }   else {
                     return 'num';
                 }
-        }
+            }
+
         console.log(fizzbuzz(9));
 
-         let a = 1;
+         /*let a = 1;
          while(i <= 30) {
              console.log(fizzbuzz(a));
              a += 1;
-         }//繰り返し文
-        
+         }*///繰り返し文
 
+        let todo = ['デザインカップの作成','データ整理','勉強会申し込み','牛乳を買う'];
+        console.log(todo[4]); //配列は0から、4の場合は、undefind
+       todo.push('歯医者に行く');//項目を追加する
+       //変数名.pop()データを削除
+       //変数名.push(データ)　追加(最後)
+       //変数名.shift() データを削除
+       //変数名.unshift(データ１、データ２)　追加(最初)
+
+        for(let item of todo) {
+            //console.log(item) ;
+       //配列の項目をすべて出力
+
+        const li = `<li>${item}</li>`;
+        //console.log(li);
+        document.getElementById('list').insertAdjacentHTML('beforeend',li);
+        /*`beforebegin`
+            `afterbegin`
+            `beforeend`
+            `afterend`
+            シングルクォートで囲むこと
+        */
+        }
 
   document.getElementById('choice').textContent = new Date();
   console.log(document.getElementById('choice').textContent);
