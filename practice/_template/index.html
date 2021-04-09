@@ -32,6 +32,11 @@
           <td id="stock"></td>
       </tr>
   </table>
+  <form action="#" id="form">
+      <input type="text" name="word">
+      <input type="submit" value="検索">
+  </form>
+  <p id="output"></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -170,6 +175,15 @@ console.log(jsbook.stock);
 document.getElementById('title').textContent = jsbook.title;
 document.getElementById('price').textContent = jsbook.price + '円';
 document.getElementById('stock').textContent = jsbook.stock;
+
+//document.getElementById('form') = function(){
+  //  console.log('クリックされました');
+//};
+document.getElementById('form').onsubmit = funtion(event) 
+{ event.preventDefault();
+const search = document.getElementById('form').word.value;
+document.getElementById('output').textContent = `「${search}」の検索中...`;
+};
     </script>
 </body>
 </html>
