@@ -37,6 +37,7 @@
       <input type="submit" value="検索">
   </form>
   <p id="output"></p>
+  <p>最終アクセス日時<span id="times"></span></p>
 </section>
 </div><!-- /.container -->
 </main>
@@ -162,6 +163,7 @@
         */
         }
 
+
   document.getElementById('choice').textContent = new Date();
   console.log(document.getElementById('choice').textContent);
 
@@ -179,11 +181,20 @@ document.getElementById('stock').textContent = jsbook.stock;
 //document.getElementById('form') = function(){
   //  console.log('クリックされました');
 //};
-document.getElementById('form').onsubmit = funtion(event) 
+/*document.getElementById('form').onsubmit = funtion(event) 
 { event.preventDefault();
 const search = document.getElementById('form').word.value;
 document.getElementById('output').textContent = `「${search}」の検索中...`;
-};
+};*/
+/*const now = new Date();
+const year = now.getFullYear();
+const month = now.getMonth();
+const date = now.getDate();
+const hours = now.getHours();
+const min = now.getMinutes();
+
+const output6 = '${year}/${month + 1}/${date}${hours}:${min}';
+document.getElementById('times').textContent = output6;*/
     </script>
 </body>
 </html>
